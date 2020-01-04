@@ -41,7 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dernek.cs" />
     <Compile Include="DernekBL.cs" />
     <Compile Include="EngelDurumBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

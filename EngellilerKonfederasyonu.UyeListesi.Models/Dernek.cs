@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EngellilerKonfederasyonu.UyeListesi.Models
 {
-    class Dernek
+    public class Dernek
     {
         public int DernekID { get; set; }
         public string DernekAd { get; set; }

@@ -16,7 +16,7 @@ namespace EngellilerKonfederasyonu.UyeListesi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmListe());
+            Application.Run(new frmMain());
         }
     }
 }

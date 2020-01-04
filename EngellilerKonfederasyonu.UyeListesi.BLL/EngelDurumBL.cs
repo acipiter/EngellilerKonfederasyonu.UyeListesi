@@ -15,7 +15,7 @@ namespace EngellilerKonfederasyonu.UyeListesi.BLL
         
         public bool EngelDurumEkle(EngelDurum engelDurum)
         {
-            SqlParameter[] p = { new SqlParameter("@EngelDurum", engelDurum.EngelDurum) };
+            SqlParameter[] p = { new SqlParameter("@EngelDurum", engelDurum.EngelDurumTip) };
 
             return hlp.ExecuteNonQuery("spEngelDurumEkle", p) > 0;
         }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace EngellilerKonfederasyonu.UyeListesi
 {
-    public partial class frmListe : Form
+    public partial class frmMain : Form
     {
-        public frmListe()
+        public frmMain()
         {
             InitializeComponent();
         }

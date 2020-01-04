@@ -13,12 +13,12 @@ namespace EngellilerKonfederasyonu.DAL
     {
         SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["cstr"].ConnectionString);
 
-        public int ExecuteNonQuery(string cmdtext, SqlParameter[] p = null)
+        public int ExecuteNonQuery(string cmdtext, SqlParameter[] p = null, CommandType type=CommandType.Text)
         {
             try
             {
                 SqlCommand cmd = new SqlCommand(cmdtext, cn);
-
+                cmd.CommandType = type;
                 if (p != null) cmd.Parameters.AddRange(p);
                 cn.Open();
                 return cmd.ExecuteNonQuery();

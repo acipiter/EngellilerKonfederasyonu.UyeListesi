@@ -1,6 +1,6 @@
 ﻿namespace EngellilerKonfederasyonu.UyeListesi
 {
-    partial class frmListe
+    partial class frmMain
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.lstUyeler = new System.Windows.Forms.ListView();
+            this.clmTcNo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmAd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuTop = new System.Windows.Forms.MenuStrip();
             this.dosyaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuCikis = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,23 +41,45 @@
             this.menuDernekEkle = new System.Windows.Forms.ToolStripMenuItem();
             this.düzenleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bulToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.TcNo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Ad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmSoyad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmBaba = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmYas = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmEngel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmCinsiyet = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmSehir = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmDernek = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuTop.SuspendLayout();
             this.SuspendLayout();
             // 
             // lstUyeler
             // 
             this.lstUyeler.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.TcNo,
-            this.Ad});
+            this.clmTcNo,
+            this.clmSoyad,
+            this.clmAd,
+            this.clmBaba,
+            this.clmYas,
+            this.clmEngel,
+            this.clmCinsiyet,
+            this.clmSehir,
+            this.clmDernek});
+            this.lstUyeler.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lstUyeler.HideSelection = false;
-            this.lstUyeler.Location = new System.Drawing.Point(1, 27);
+            this.lstUyeler.Location = new System.Drawing.Point(0, 24);
             this.lstUyeler.Name = "lstUyeler";
-            this.lstUyeler.Size = new System.Drawing.Size(793, 459);
+            this.lstUyeler.Size = new System.Drawing.Size(793, 474);
             this.lstUyeler.TabIndex = 0;
             this.lstUyeler.UseCompatibleStateImageBehavior = false;
             this.lstUyeler.View = System.Windows.Forms.View.List;
+            // 
+            // clmTcNo
+            // 
+            this.clmTcNo.Text = "T.C. No";
+            // 
+            // clmAd
+            // 
+            this.clmAd.DisplayIndex = 1;
+            this.clmAd.Text = "Adı";
             // 
             // menuTop
             // 
@@ -79,7 +103,7 @@
             // menuCikis
             // 
             this.menuCikis.Name = "menuCikis";
-            this.menuCikis.Size = new System.Drawing.Size(99, 22);
+            this.menuCikis.Size = new System.Drawing.Size(180, 22);
             this.menuCikis.Text = "Çıkış";
             this.menuCikis.Click += new System.EventHandler(this.menuCikis_Click);
             // 
@@ -100,7 +124,7 @@
             this.menuEngelTipiEkle,
             this.menuDernekEkle});
             this.ekleToolStripMenuItem.Name = "ekleToolStripMenuItem";
-            this.ekleToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.ekleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ekleToolStripMenuItem.Text = "Ekle";
             // 
             // menuUyeEkle
@@ -127,24 +151,45 @@
             // düzenleToolStripMenuItem
             // 
             this.düzenleToolStripMenuItem.Name = "düzenleToolStripMenuItem";
-            this.düzenleToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.düzenleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.düzenleToolStripMenuItem.Text = "Düzenle";
             // 
             // bulToolStripMenuItem
             // 
             this.bulToolStripMenuItem.Name = "bulToolStripMenuItem";
-            this.bulToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.bulToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.bulToolStripMenuItem.Text = "Bul";
             // 
-            // TcNo
+            // clmSoyad
             // 
-            this.TcNo.Text = "T.C. No";
+            this.clmSoyad.DisplayIndex = 2;
+            this.clmSoyad.Text = "Soyad";
             // 
-            // Ad
+            // clmBaba
             // 
-            this.Ad.Text = "Adı";
+            this.clmBaba.Text = "Baba Adı";
             // 
-            // frmListe
+            // clmYas
+            // 
+            this.clmYas.Text = "Yaşı";
+            // 
+            // clmEngel
+            // 
+            this.clmEngel.Text = "Engel Yüzdesi";
+            // 
+            // clmCinsiyet
+            // 
+            this.clmCinsiyet.Text = "Cinsiyeti";
+            // 
+            // clmSehir
+            // 
+            this.clmSehir.Text = "Yaşadığı Şehir";
+            // 
+            // clmDernek
+            // 
+            this.clmDernek.Text = "Bağlı Olduğu Dernek";
+            // 
+            // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -152,8 +197,9 @@
             this.Controls.Add(this.lstUyeler);
             this.Controls.Add(this.menuTop);
             this.MainMenuStrip = this.menuTop;
-            this.Name = "frmListe";
-            this.Text = "frmListe";
+            this.Name = "frmMain";
+            this.Text = "Engelliler Konfederasyonu Üye Listesi";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuTop.ResumeLayout(false);
             this.menuTop.PerformLayout();
             this.ResumeLayout(false);
@@ -174,7 +220,14 @@
         private System.Windows.Forms.ToolStripMenuItem menuEngelTipiEkle;
         private System.Windows.Forms.ToolStripMenuItem menuDernekEkle;
         private System.Windows.Forms.ToolStripMenuItem menuCikis;
-        private System.Windows.Forms.ColumnHeader TcNo;
-        private System.Windows.Forms.ColumnHeader Ad;
+        private System.Windows.Forms.ColumnHeader clmTcNo;
+        private System.Windows.Forms.ColumnHeader clmAd;
+        private System.Windows.Forms.ColumnHeader clmSoyad;
+        private System.Windows.Forms.ColumnHeader clmBaba;
+        private System.Windows.Forms.ColumnHeader clmYas;
+        private System.Windows.Forms.ColumnHeader clmEngel;
+        private System.Windows.Forms.ColumnHeader clmCinsiyet;
+        private System.Windows.Forms.ColumnHeader clmSehir;
+        private System.Windows.Forms.ColumnHeader clmDernek;
     }
 }

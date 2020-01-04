@@ -9,6 +9,6 @@ namespace EngellilerKonfederasyonu.UyeListesi.Models
     public class EngelDurum
     {
         public int EngelDurumID { get; set; }
-        public string EngelDurum { get; set; }
+        public string EngelDurumTip { get; set; }
     }
 }

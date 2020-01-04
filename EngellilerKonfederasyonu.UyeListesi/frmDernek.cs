@@ -1,4 +1,6 @@
-﻿using System;
+﻿using EngellilerKonfederasyonu.UyeListesi.BLL;
+using EngellilerKonfederasyonu.UyeListesi.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +21,12 @@ namespace EngellilerKonfederasyonu.UyeListesi
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Çalıştım");
+            DernekBL dbl = new DernekBL();
+            Dernek d = new Dernek();
+
+            d.DernekAd = txtDernek.Text;
+
+            dbl.DernekEkle(d);
         }
     }
 }
