@@ -52,6 +52,12 @@
     <Compile Include="frmDernek.Designer.cs">
       <DependentUpon>frmDernek.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDernekListele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDernekListele.Designer.cs">
+      <DependentUpon>frmDernekListele.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEngel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmDernek.resx">
       <DependentUpon>frmDernek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDernekListele.resx">
+      <DependentUpon>frmDernekListele.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEngel.resx">
       <DependentUpon>frmEngel.cs</DependentUpon>

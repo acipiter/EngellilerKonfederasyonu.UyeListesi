@@ -39,5 +39,10 @@ namespace EngellilerKonfederasyonu.UyeListesi
         {
             this.Close();
         }
+
+        private void btnDernekListele_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

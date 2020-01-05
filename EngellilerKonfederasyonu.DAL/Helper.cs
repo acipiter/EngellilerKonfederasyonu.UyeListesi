@@ -13,7 +13,7 @@ namespace EngellilerKonfederasyonu.DAL
     {
         SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["cstr"].ConnectionString);
 
-        public int ExecuteNonQuery(string cmdtext, SqlParameter[] p = null, CommandType type=CommandType.Text)
+        public int ExecuteNonQuery(string cmdtext, SqlParameter[] p = null, CommandType type = CommandType.Text)
         {
             try
             {
@@ -29,18 +29,19 @@ namespace EngellilerKonfederasyonu.DAL
             }
             finally
             {
-                if (cn!=null && cn.State != ConnectionState.Closed)
+                if (cn != null && cn.State != ConnectionState.Closed)
                 {
                     cn.Close();
                 }
             }
         }
 
-        public SqlDataReader ExecuteReader(string cmdtext, SqlParameter[] p=null)
+        public SqlDataReader ExecuteReader(string cmdtext, SqlParameter[] p = null, CommandType type = CommandType.Text)
         {
             try
             {
                 SqlCommand cmd = new SqlCommand(cmdtext, cn);
+                cmd.CommandType = type;
                 if (p != null) cmd.Parameters.AddRange(p);
 
                 cn.Open();
@@ -50,6 +51,20 @@ namespace EngellilerKonfederasyonu.DAL
             {
                 throw;
             }
+        }
+
+        public DataTable MyDataTable(string cmdtext, SqlParameter[] p = null, CommandType type = CommandType.Text)
+        {
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmdtext, cn);
+            da.SelectCommand.CommandType = type;
+            if (p !=null)
+            {
+                da.SelectCommand.Parameters.AddRange(p);
+            }
+            da.Fill(dt);
+            return dt;
+
         }
     }
 }
